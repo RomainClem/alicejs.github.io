@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- Javascript Project -->
+<!-- Author: Romain CLEMENCON -->
+<html lang="en-IE">
+	<head>
+		<title>Disney project</title>
+		<meta charset="utf-8">
+		<script src="script.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/4416d4dc14.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<div class="logo"></div>
+		</header>
+		<main>
+			<div class="top">
+				<h1>Who is your favourite character in Alice in Wonderland?</h1>
+			</div>
+			<div class="container">
+				<div class="menu-container">
+					<div id="overlap">
+					<button onclick="showLinks()" id="menu"><i class="fas fa-bars fa-lg"></i>  MENU</button>
+					<div id="link">
+						<a href="https://www.imdb.com/title/tt0043274/" target="_blank">IMDB</a>
+						<a href="https://en.wikipedia.org/wiki/Alice_in_Wonderland_(1951_film)" target="_blank">Movie Wikipedia</a>
+						<a href="https://disney.fandom.com/wiki/Category:Alice_in_Wonderland_characters" target="_blank">List of characters</a>
+					</div>
+					</div>
+				</div>
+				<div id="input">
+					<form action="">
+						<label for="choice">Enter your Character here : </label>
+						<input type="text" id="choice">
+					</form>
+				</div>
+				<div class="list-container">
+					<button title="click on any characters" onclick="showList()" id="list">List of Characters</button>
+					<div id="characters">
+						<ul>
+							<li onclick="alice()">Alice</li>
+							<li onclick="bill()">Bill the Lizard</li>
+							<li onclick="king()">King of Hearts</li>
+							<li onclick="card()">Card Soldier</li>
+							<li onclick="catterpillar()">Caterpillar</li>
+							<li onclick="cat()">Cheshire Cat</li>
+							<li onclick="oysters()">Curious Oysters</li>
+							<li onclick="hatter()">Mad Hatter</li>
+							<li onclick="hare()">March Hare</li>
+							<li onclick="dinah()">Dinah</li>
+							<li onclick="dodo()">Dodo</li>
+							<li onclick="doorknob()">The Doorknob</li>
+							<li onclick="dormouse()">Dormouse</li>
+							<li onclick="queen()">Queen of Hearts</li>
+							<li onclick="tweedles()">Tweedle Dee and Tweedle Dum</li>
+							<li onclick="flowers()">Flowers of Wonderland</li>
+							<li onclick="walrus()">The Walrus and the Carpenter</li>
+							<li onclick="rabbit()">White Rabbit</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="button-container">
+				<div id="play">
+					<button id="button-play" onclick="playGame()" onmouseover="playGameOver()" onmouseout="playGameOut()">Play the game</button>
+				</div>
+				<div id="compare">
+					<button id="button-compare" onclick="compare()" onmouseover="compareOver()" onmouseout="compareOut()">Compare with chosen character</button>
+				</div>
+			</div>
+			<div id="result-container">
+				<div id="random-char">
+					<div id="info">
+						<p>Name : <span id="name"></span></p>
+						<p>Alignment : <span id="alignment"></span></p>
+						<p>Quote : <span id="quote"></span></p>
+						<p>Description : <span id="description"></span></p>
+					</div>
+					<div class="picture-container">
+						<div class="close">
+							<button id="close-char" onclick="closeChar()">
+								<i class="fas fa-window-close fa-2x"></i>
+							</button>
+						</div>
+						<img id="picture" src="">
+						<div class="title"><p><span id="title-name"></span></p></div>
+						<div></div>
+					</div>	
+				</div>
+				<div id="compare-char">
+					<div id="compare-info">
+						<p>Name : <span id="compare-name"></span></p>
+						<p>Alignment : <span id="compare-alignment"></span></p>
+						<p>Quote : <span id="compare-quote"></span></p>
+						<p>Description : <span id="compare-description"></span></p>
+					</div>
+					<div class="picture-container">
+						<div class="close">
+							<button id="compare-close-char" onclick="compareCloseChar()">
+								<i class="fas fa-window-close fa-2x"></i>
+							</button>
+						</div>
+						<img id="compare-picture" src="">
+						<div class="title"><p><span id="compare-title-name"></span></p></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<form action="" onsubmit="return false;">
+				<label for="like">Do you like Alice in wonderland ?</label>
+				<input type="range" min="0" max="100" id="like" onchange="slide()">
+				<p><span id="opinion"></span></p>
+			</form>
+			<div><img id="like-picture" src="images/alice-curious.png"></div>
+			<details open>
+				<summary>&copy; Romain Clemencon 2019</summary>
+					<p>All rights reserved</p>
+					<p>All Disney material is own by The Walt Disney Company</p>
+					<p>Email: <a href="mailto:romain.clemencon@mycit.ie">romain.clemencon@mycit.ie</a></p>
+			</details>
+			<iframe width="150" height="100" src="https://www.youtube.com/embed/sVqSj1cxrJM?list=PLEFBEB93EAA197277" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+		</footer>
+	</body>
+</html>
